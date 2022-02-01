@@ -1,0 +1,80 @@
+<app-navbar [parent_msg]="child_msg"></app-navbar>
+<main class="testimonial py-5" id="testimonial">
+    <div class="container main_body">
+        <div class="row">
+            <div class="side col-md-4 py-5 text-center ">
+                <div class=" ">
+                    <div class="card-body">
+                        <img
+                            src="assets/user.png" class="brand_logo" alt="Logo">
+
+                        <h2 class="py-3">Semester Results</h2>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class=" side2 col-md-8 py-5 border">
+                <div class=" mt-5 mb-5">
+                    <div class="col-md-8 col-lg-8 mb-5">
+                      <button class="btn btn-primary" style="width: 120px"onclick="window.print();">Print Results</button>
+                      <br/>
+                      <br/>
+                      <br/>
+                      <table class="table table-hover mb-5">
+                        <thead style="color: black;">
+                          <tr>
+                            
+                            <th>Username</th>
+
+                            <th>DBMS</th> 
+                            
+                            <th>Computer Networks</th> 
+                            
+                            <th>JAVA</th> 
+                            
+                            <th>Mechanics</th> 
+                            
+                            
+                            <!-- <th>Action</th> -->
+                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>{{ education.username}}</td>
+                            <td>{{ education.secondary}}</td>
+                            
+                            <td>{{ education.ss }}</td>
+                            
+                            <td>{{ education.btech }}</td>
+                            
+                            <td>{{ education.mtech }}</td>
+                            
+                            <!-- <td><button (click) = "updateEmployee(edulist.id)" class = "btn btn-info">Update</button></td> -->
+                           
+                           
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                <!-- <h1 class=" display-5 heading pb-4 text-center"><strong>Results</strong></h1>
+                <button class="btn btn-success" onclick="window.print();">Print</button>
+                <div class="mb-2">
+                    <label> <b> Marks Obtained in Subject 1 : </b></label> {{education.secondary}}
+                </div>
+                <div  class="mb-2">
+                    <label> <b> Marks Obtained in Subject 2 : </b></label> {{education.ss}}
+                </div>
+                <div class="mb-2">
+                    <label> <b> Marks Obtained in Subject 3 : </b></label> {{education.btech}}
+                </div>
+                <div class="mb-2">
+                    <label> <b> Marks Obtained in Subject 4 : </b></label> {{education.mtech}}
+                </div> -->
+                <button (click) = "updateEmployee()" class = "btn btn-info">Update</button>
+                
+            </div>
+        </div>
+    </div>
+</main>

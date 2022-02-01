@@ -1,0 +1,79 @@
+<app-navbar [parent_msg]="chid_msg"></app-navbar>
+<main>
+    <div class="container log h-100">
+        <div class="d-flex justify-content-center h-100">
+            <div class="user_card">
+                <div class="d-flex justify-content-center">
+                    <div class="brand_logo_container">
+                        <img
+                            src="assets/user.png"
+                            class="brand_logo" alt="Logo">
+                            <h3>Student</h3>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center form_container">
+                    <form #f="ngForm" (ngSubmit) = "onSubmit()">
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" id="UserName" [(ngModel)]="username" name="UserName" minlength=3 maxlength=50
+                                class="form-control input_user" value=""
+                                placeholder="Enter valid Username" onchange="check()" required >
+                        </div>
+                        <div class="input-group mb-2">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" id="Password" [(ngModel)]="password" name="Password"
+                                class="form-control input_pass" value=""
+                                placeholder="Enter valid password" onchange="check()" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" 
+                                    id="customControlInline"> <label
+                                    class="custom-control-label" for="customControlInline">Remember
+                                    me</label>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-3 login_container">
+                            <input type="submit" [disabled]="!f.valid" (click) = "getEmployees()"  id="mybtn" value="Login" class="btn login_btn" />
+                        </div>
+                    </form>
+                </div>
+
+                <div class="mt-4">
+                    <div class="d-flex justify-content-center links">
+                        Don't have an account? <a [routerLink]="['/Sign Up']" class="ml-2">
+                            Register Here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<!-- <table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> First Name</th>
+            <th> Last Name </th>
+            <th> Email Id</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employee of employees" >
+            <td> {{ employee.firstName }} </td>
+            <td> {{ employee.lastName }} </td>
+            <td> {{ employee.emailId }} </td>
+            <td>
+                <button (click) = "updateEmployee(employee.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table> -->
+

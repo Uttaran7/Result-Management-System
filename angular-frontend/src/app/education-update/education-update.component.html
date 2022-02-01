@@ -1,0 +1,68 @@
+<app-navbar [parent_msg]="child_msg"></app-navbar>
+<main class="testimonial py-5" id="testimonial">
+    <div class="container main_body">
+        <div class="row">
+            <div class="side col-md-4 py-5 text-center ">
+                <div class=" ">
+                    <div class="card-body">
+                        <img
+                            src="assets/logo.png"
+                            class="brand_logo" alt="Logo">
+
+                        <h2 class="py-3">View and Update Results</h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class=" side2 col-md-8 py-5 border">
+                <h1 class=" display-4 heading pb-4 text-center"><strong>Update Results</strong></h1>
+                <form (ngSubmit)="onsubmit()">
+                    <div class="form-row">
+                        <div class="form-group col-md-12 mb-2">
+                            <label id="X">Subject 1: DBMS </label>
+                            <input id="X" name="Secondary" placeholder="Enter Marks" [(ngModel)]="education.secondary"
+                                class="form-control" type="text"
+                                required >
+                        </div>
+                        <div class="form-group col-md-12 mb-2">
+                            <label id="XII">Subject 2: Computer Networks </label>
+                            <input type="text" class="form-control" id="XII" name="ss" [(ngModel)]="education.ss"
+                                placeholder="Enter Marks" type="text"
+                                required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6 mb-2">
+                            <label id="BTech">Subject 3: JAVA </label>
+                            <input id="BTech" name="btech" placeholder="Enter Marks" [(ngModel)]="education.btech"
+                                class="form-control" type="text"
+                                required >
+                        </div>
+                        <div class="form-group col-md-6 mb-2">
+                            <label id="MTech">Subject 4: Mechanics </label>
+                            <input type="text" class="form-control" id="mtech" name="mtech" [(ngModel)]="education.mtech"
+                                placeholder="Enter Marks" type="text"
+                                >
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="form-row mb-2">
+                        <div class="input-group col-md-12 mb-2">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-book-open"></i></span>
+                            </div>
+                            <input class="form-control form-control-lg" id="formFileLg"
+                                type="file" /><br>
+                        </div>
+                        <div class="small text-muted mt-2">Upload your any MarkSheet. Max
+                            file size 50 MB</div>
+                    </div> -->
+
+                    <div class="form-row">
+                        <input type="submit" value="Save Changes" class="btn login_btn" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>

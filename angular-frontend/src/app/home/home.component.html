@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Modern College, Pune</title>
+   <link rel="stylesheet" href="home.component.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark main-navbar bg-dark main-navbar-light" id="navbar">
+    <h1>TMC.</h1>
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my-nav"
+            aria-controls="my-nav" aria-expanded="false" aria-label="toggle-navigation">
+            <span class="fa fa-bars">Menu</span>
+        </button>
+        <div class="collapse navbar-collapse" id="my-nav">
+            <ul class="navbar-nav m-auto">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <!-- <li><a  [routerLink]="'/admin'">ADMIN LOGIN</a></li>
+                <li><a [routerLink]="'/student'">STUDENT LOGIN</a></li> -->
+                <li><a [routerLink]="'/Login'">Teacher LOGIN</a></li>
+                <li><a [routerLink]="'/studentLogin'">Student LOGIN</a></li>
+               
+  
+            </ul>
+        </div>
+    </div>
+  </nav>
+  
+    <section class="header">
+        <div class="text-box">
+            <h1>THE MODERN COLLEGE, PUNE</h1>
+            <p>India's one of the best Engineering college</p>
+            <a href="" class="btn">Visit Us To Know More</a>
+
+        </div>
+
+
+    </section>
+    <!------course------>
+    <section class="course">
+        <h1>Courses We Offer</h1>
+        <p>List Of Best Courses You Can Pursue</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>Diploma</h3>
+            </div>
+            <div class="course-col">
+                <h3>Under Graduation</h3>
+            </div>
+            <div class="course-col">
+                <h3>Post Graduation</h3>
+            </div>
+            <div class="course-col">
+                <h3>Ph.D</h3>
+            </div>
+            <div class="course-col">
+                <h3>MCA</h3>
+            </div>
+        </div>
+    </section>
+    <!--Campus-->
+    <section class="campus">
+        <h1>Our Campuses</h1>
+        <p>Across India</p>
+        <div class="row">
+            <div class="campus-col">
+                <img src="assets/clg-1.png">
+                <div class="layer">
+                    <h3>DELHI</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="assets/clg-4.jpg">
+                <div class="layer">
+                    <h3>MUMBAI</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="assets/clg-5.jpg">
+                <div class="layer">
+                    <h3>CHENNAI</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---Facilities-->
+    <section class="facilities">
+        <h1>Our Facilities</h1>
+        <div class="row">
+            <div class="facilities-col">
+                <img src="assets/library.png">
+                <h3>Library</h3>
+            </div>
+            <div class="facilities-col">
+                <img src="assets/basketball.png">
+                <h3>Play Ground</h3>
+            </div>
+            <div class="facilities-col">
+                <img src="assets/cafeteria.png">
+                <h3>Cafeteria</h3>
+            </div>
+        </div>
+    </section>
+    <!--Testimonials-->
+    <section class="testimonials">
+        <h1>What Our Students Say</h1>
+        <p>Proud Of Our Students</p>
+        <div class="row">
+            <div class="testimonials-col">
+                <img src="assets/user1.jpg">
+                <div>
+                    <p>
+                        Due to the efforts made by the faculty and placement cell at
+                        TMC i was able to bag a job in the second company
+                        that i applied for. They always provided me with the assistance
+                        that i required for my overall development and to improve my
+                        technical knowledge. I will always be grateful to them for
+                        providing me a platform of practical learning and preparing me
+                        for the corporate life.
+                    </p>
+                    <h3>Aditi Semwal</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+            <div class="testimonials-col">
+                <img src='assets/user2.jpg'>
+                <div>
+                    <p>
+                        My bachelor\'s degree at TMC in computer science
+                        consisted of many projects based evaluation and faculty connect.
+                        The mentors at TMC helped us enhance my academic
+                        and interpersonal skills. The regular interaction with the Placement
+                        team also encouraged me to excel in my interview and developing skills
+                        that are required for future use.
+                    </p>
+                    <h3>Abhimanyu Sharma</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Call To Action-->
+    <section class="cta">
+        <h1>Enroll For Our Various Online Courses</h1>
+        <a href="" class="btn">CONTACT US</a>
+    </section>
+    <!--Footer-->
+    <section class="footer-1">
+        <h4>Follow Us On</h4>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+
+        </div>
+        <p>Copyright &copy; 2021 The Modern College</p>
+        <p>Developed by LTI 2021</p>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+

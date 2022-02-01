@@ -1,0 +1,78 @@
+<app-navbar [c_id]="id" [parent_msg]="child_msg"></app-navbar>
+<main class="testimonial py-5" id="testimonial">
+    <div class="container main_body">
+        <div class="row">
+            <div class="side col-md-4 py-5 text-center ">
+                <div class=" ">
+                    <div class="card-body">
+                        <img
+                            src="assets/user.png" class="brand_logo" alt="Logo">
+
+                        <h2 class="py-3">Self Details</h2>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class=" side2 col-md-8 py-5 border">
+                <div class=" mt-5 mb-5">
+                    <div class="col-md-8 col-lg-8 mb-5">
+                      <button class="btn btn-primary" style="width: 120px"onclick="window.print();">Print Details</button>
+                      <br/>
+                      <br/>
+                      <br/>
+                      <table class="table table-hover mb-5">
+                        <thead style="color: black;">
+                          <tr>
+                            
+                            <th>First Name</th> 
+                            <th>Last Name</th>
+                            <th>Email ID</th> 
+                            <th>Phone Number</th>
+                            <th>Semester Start</th> 
+                            <th>Subjects</th>
+                           
+                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>{{ employee.firstName}}</td>
+                            <td>{{ employee.lastName}}</td>
+                            <td>{{ employee.emailId}}</td>
+                            <td>{{ employee.phone}}</td>
+                            <td>{{ employee.jdate}}</td>
+                            <td>{{ employee.address}}</td>
+                          
+                           
+                           
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                <!-- <h1 class=" display-5 heading pb-4 text-center"><strong>Your Personal Details</strong></h1>
+                <div>
+                    <label> <b> First Name: </b></label> {{employee.firstName}}
+                </div>
+                <div>
+                    <label> <b> Last Name: </b></label> {{employee.lastName}}
+                </div>
+                <div>
+                    <label> <b> Email Id: </b></label> {{employee.emailId}}
+                </div>
+                <div>
+                    <label> <b> Contact No: </b></label> {{employee.phone}}
+                </div>
+                <div>
+                    <label> <b> Semester Started on: </b></label> {{employee.jdate}}
+                </div>
+                <div>
+                    <label> <b> Subjects: </b></label> {{employee.address}}
+                </div> -->
+                <div>
+                    <button (click) = "updateEmployee(employee.id)" class = "btn btn-warning "> Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

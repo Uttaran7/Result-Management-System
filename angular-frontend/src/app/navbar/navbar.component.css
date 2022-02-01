@@ -1,0 +1,10 @@
+.navbar{
+	background:#3e4d48;
+	font-family: 'Roboto', sans-serif;	
+}
+.nav-link{
+	color: black;
+}
+.active{
+	color: white;
+}

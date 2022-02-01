@@ -1,0 +1,138 @@
+<!-- <div class="col-md-6 offset-md-3">
+    <h3> Create Employee </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> First Name</label>
+            <input type="text" class ="form-control" id = "firstName" [(ngModel)] = "employee.firstName" name = "firstName">
+        </div>
+    
+        <div class="form-group">
+            <label> Last Name</label>
+            <input type="text" class ="form-control" id = "lastName"
+                [(ngModel)] = "employee.lastName" name = "lastName">
+        </div>
+    
+        <div class="form-group">
+            <label> Email Id</label>
+            <input type="text" class ="form-control" id = "emailId"
+                [(ngModel)] = "employee.emailId" name = "emailId">
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div>  -->
+
+
+    <app-navbar [parent_msg]="child_msg"></app-navbar>
+    <main class="testimonial py-5" id="testimonial">
+        <div class="container main_body">
+            <div class="row">
+                <div class="side col-md-4 py-5 text-center ">
+                    <div class=" ">
+                        <div class="card-body">
+                            <img
+                                src="assets/education.jpeg"
+                                class="brand_logo" alt="Logo">
+
+                            <h2 class="py-3">Register yourself</h2>
+                            <div class="mt-4">
+                                <div class="d-flex justify-content-center links">
+                                    Already registered as a Teacher? <a href="Login" class="ml-2">Login Here!</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class=" side2 col-md-8 py-5 border">
+                    <h1 class=" display-5 heading pb-5 text-center">Student Registration</h1>
+                    <form #f="ngForm" name="form" (ngSubmit) = "f.form.valid && onSubmit()">
+                        <div class="form-row">
+                            <div class="input-group col-md-12 mb-2">
+                                <!-- <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div> -->
+                                <input id="FirstName" [(ngModel)] = "employee.firstName" ngModel #first="ngModel" name="FirstName" placeholder="Enter First Name *"
+                                ngModel #fname="ngModel" (change)="checkname(fname)" class="form-control mandatory" minlength=3 maxlength=25 type="text" 
+                                    required pattern="^[a-zA-Z]+$">
+                            </div>
+                            <div class="input-group col-md-12 mb-2">
+                                <!-- <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div> -->
+                                <input type="text" class ="form-control mandatory" id = "lastName" placeholder="Enter Last Name *" ngModel #lname="ngModel" (change)="checkname(lname)"
+                                    [(ngModel)] = "employee.lastName" name = "lastName" required pattern="^[a-zA-Z]+$">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-group col-md-6 mb-2">
+                                <!-- <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                </div> -->
+                                <input id="email" [(ngModel)] = "employee.emailId" ngModel #email="ngModel" (change)="checkemail(email)"  name="email" placeholder="Enter your Email "
+                                    class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" >
+                            </div>
+                            <div class="input-group col-md-6 mb-2">
+                                <!-- <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                </div> -->
+                                <input type="text" class ="form-control" id = "phone" placeholder="Enter your Phone No. " ngModel #phone="ngModel" (change)="checkphone(phone)"
+                                    [(ngModel)] = "employee.phone" name = "phone" pattern="^[0-9]{10}$">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-group col-md-12 mb-2 ">
+                                <!-- <div class="input-group-append ">
+                                    <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                                </div> -->
+                                <input id="username"  [(ngModel)] = "employee.username" ngModel #username="ngModel" (change)="checkuser(username)"  name="username" placeholder="Enter your Username *"
+                                    class="form-control mandatory"  type="text" 
+                                    required pattern="[a-zA-Z0-9]+">
+                            </div>
+                            <div class="input-group col-md-12 mb-2">
+                                <!-- <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                </div> -->
+                                <input type="password" class ="form-control mandatory" ngModel #password="ngModel" id = "password" placeholder="Enter Password *"
+                                    [(ngModel)] = "employee.password" name = "password" (change)="checkpass(password)" required 
+                                    pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\S+$)([^@#$%^&+=]).{6,12}$">
+                            </div>
+                        </div>
+                        <!-- <div class="form-row mb-2">
+                            <div class="input-group col-md-12 mb-2">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fas fa-image"></i></span>
+                                </div>
+                                <input class="form-control form-control-lg" id="formFileLg"
+                                    type="file" /><br>
+                            </div>
+                            <div class="small text-muted mt-2">Upload your Image. Max
+                                file size 50 MB</div>
+                        </div> -->
+
+                        <div class="form-row mb-0">
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input"
+                                        id="customControlInline"> <label
+                                        class="custom-control-label" for="customControlInline">I agree to all the <a href="#">Terms &
+                                            Conditions</a>.
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                
+                        <div class="form-row" >  
+                            <input type="submit" [disabled]="!f.valid"  id="mybtn" value="Sign Up"  class="btn login_btn" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    
